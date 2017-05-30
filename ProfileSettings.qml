@@ -21,7 +21,7 @@ Window {
     property bool useDevPackage: false // Enable disbale developer mode
 
     readonly property double scaleRation: Math.min(mainRootWindow.width/1920,mainRootWindow.height/1080)
-    readonly property string packageSource: "http://localhost:8080/" + (useDevPackage ? "devPackage" : "releasePackage") // package server URL
+    readonly property string packageSource: "https://raw.githubusercontent.com/IndiLogic/IRProfileCreator/master/" + (useDevPackage ? "devPackage" : "releasePackage") // package server URL
     readonly property string packageInfoFileSource: packageSource + "/packageInfo.json" // package info file server URL
 
 
