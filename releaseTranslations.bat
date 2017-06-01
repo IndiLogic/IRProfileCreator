@@ -1,0 +1,1 @@
+lrelease IRProfileCreator.pro

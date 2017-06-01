@@ -10,15 +10,15 @@ PopupContent {
 
     contentItem: Item {
 
-        width: 400
-        height: 232
+        width: columnMain.width + 100
+        height: columnMain.height + 100
 
 
         Column {
+            id: columnMain
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-            Layout.fillHeight: false
             spacing: 50
 
             StyledCheckBox {
@@ -63,6 +63,8 @@ PopupContent {
 
 
 }
+
+
 
 
 

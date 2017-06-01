@@ -30,5 +30,6 @@ Text {
         verticalAlignment: textMain.verticalAlignment
         textFormat: textMain.textFormat
         elide : textMain.elide
+        fontSizeMode : textMain.fontSizeMode
     }
 }

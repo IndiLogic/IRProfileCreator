@@ -10,5 +10,16 @@ var wizardState = {
            "PageDuplicateProfile.qml",
            "PageExplainProfile.qml"
        ]
+    },
+    pageCreateNewProfile: {
+       userChoice: 0,
+       pages: [
+           "PageCreateDefaultProfile.qml",
+           "PageCreateAppProfile.qml"
+       ]
+    },
+    pageCreateDefaultProfile: {
+       profileName: "",
+       profileIconPath: ""
     }
 };

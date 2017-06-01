@@ -7,55 +7,25 @@ import "../scripts/Settings.js" as Settings
 
 PageBase {
 
-    /*Rectangle {
-        //
-        // We need to swap width and height becuase we rotated rectangle
-        // to get gradient horizontal
-        //
-        width : parent.height
-        height: parent.width
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.verticalCenter: parent.verticalCenter
-        rotation: 90
-        gradient: Gradient {
-            GradientStop {
-                position: 0
-                color: "#091224"
-            }
-
-            GradientStop {
-                position: 0.299
-                color: "#0f2943"
-            }
-
-            GradientStop {
-                position: 0.701
-                color: "#0f2943"
-            }
-
-            GradientStop {
-                position: 1
-                color: "#091224"
-            }
-        }
-    }*/
 
     TextWarning {
-        text: qsTr("Make sure your") + " " + DeviceInfo.deviceInfo.name + " "  + qsTr("stay connected while working with wizard")
+        //: %1 is device name. %1 will replace at runtime
+        text: qsTr("Make sure your %1 stay connected while working with wizard").arg(DeviceInfo.deviceInfo.name)
         anchors.top: parent.top
         anchors.topMargin: 30
         anchors.horizontalCenter: parent.horizontalCenter
     }
 
     Column{
-
+        parent: pageContentParent
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
         spacing: 50
 
         Column{
             TextBlueBigTitle{
-                text: qsTr("Welcome to profile creator for") + " " + DeviceInfo.deviceInfo.name
+                //: %1 is device name. %1 will replace at runtime
+                text: qsTr("Welcome to profile creator for %1").arg(DeviceInfo.deviceInfo.name)
                 anchors.horizontalCenter: parent.horizontalCenter
             }
 

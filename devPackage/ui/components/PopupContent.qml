@@ -87,7 +87,7 @@ Rectangle {
 
             TextBlueBigTitle {
                 id: textTitle
-                text: qsTr("This is going to")
+                text: "This is going to"
                 anchors.horizontalCenter: parent.horizontalCenter
             }
 

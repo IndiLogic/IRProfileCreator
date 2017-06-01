@@ -17,21 +17,19 @@ Item
         spacing: 15
         anchors.right: parent.right
 
-        RaisedButton {
+        RaisedButtonBlue {
             useFontAwesome: true
             text: fontAwesome.icons.fa_download
-            buttonColor: "#ff02BEE2"
             visible: useDevPackage
-            activeFocusOnTab: false
+            activeFocusOnTab: true
 
             onClicked: fourceUpdate(true)
         }
 
-        RaisedButton {
+        RaisedButtonBlue {
             useFontAwesome: true
             text: fontAwesome.icons.fa_cog
-            buttonColor: "#ff02BEE2"
-            activeFocusOnTab: false
+            activeFocusOnTab: true
 
             onClicked: popupSettings.open()
         }
@@ -47,8 +45,8 @@ Item
 
 
         TextBlueMedium {
-            text: qsTr("InputRedirection Profile Creator") + (stackViewMain.deviceName.length > 0 ? " " + qsTr("for") + " " + stackViewMain.deviceName : "" )+ " (" + packageManager.version + ")"
-
+            //: %1 is device name. %1 will replace at runtime
+            text: (stackViewMain.deviceName.length > 0 ? qsTr("InputRedirection Profile Creator for %1").arg(stackViewMain.deviceName) : qsTr("InputRedirection Profile Creator")) + " (" + packageManager.version + ")"
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
         }
@@ -59,7 +57,7 @@ Item
             Layout.fillHeight: true
 
             color: "#00000000"
-            radius: 3
+            radius: 8
             border.width: 2
             border.color: "white"
 
@@ -77,7 +75,7 @@ Item
                         property: "x"
                         from: width
                         to: 0
-                        duration: 100
+                        duration: 200
                     }
                 }
                 pushExit: Transition {
@@ -85,7 +83,7 @@ Item
                         property: "x"
                         from: 0
                         to: -width
-                        duration: 100
+                        duration: 200
                     }
                 }
                 popEnter: Transition {
@@ -93,7 +91,7 @@ Item
                         property: "x"
                         from: -width
                         to: 0
-                        duration: 100
+                        duration: 200
                     }
                 }
                 popExit: Transition {
@@ -101,7 +99,23 @@ Item
                         property: "x"
                         from: 0
                         to: width
-                        duration: 100
+                        duration: 200
+                    }
+                }
+                replaceEnter: Transition {
+                    PropertyAnimation {
+                        property: "x"
+                        from: -width
+                        to: 0
+                        duration: 200
+                    }
+                }
+                replaceExit: Transition {
+                    PropertyAnimation {
+                        property: "x"
+                        from: 0
+                        to: width
+                        duration: 200
                     }
                 }
 

@@ -46,8 +46,8 @@ Rectangle {
 
     Rectangle {
         id: rectangleContent
-        height: columnRoot.height + (40 )
-        width: columnRoot.width + (40 )
+        height: columnRoot.height + 40
+        width: columnRoot.width + 40
         anchors.centerIn: parent
         property Item lastFocuItem: null
 
@@ -81,8 +81,8 @@ Rectangle {
                         id: mainText
                         shadowEnable: false
                         wrapMode: Text.WordWrap
-                        Layout.maximumWidth: (900 )
-                        Layout.maximumHeight: (600 )
+                        Layout.maximumWidth: 900
+                        Layout.maximumHeight: 600
 
                     }
                 }

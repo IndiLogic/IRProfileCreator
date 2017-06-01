@@ -21,3 +21,12 @@ function compareVersions(v1, comparator, v2) {
     }
     return eval('0' + comparator + cmp);
 }
+
+function getClenPath(filename)
+{
+    var path = filename;
+    // remove prefixed "file:///"
+    path= path.replace(/^(file:\/{3})|(qrc:\/{2})|(http:\/{2})/,"");
+    // unescape html codes like '%23' for '#'
+    return decodeURIComponent(path);
+}

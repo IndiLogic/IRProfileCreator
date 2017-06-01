@@ -1,5 +1,6 @@
 import QtQuick 2.7
 import QtQuick.Window 2.0
+import QtQuick.Dialogs 1.2
 
 import "components"
 import "scripts/DeviceInfo.js" as DeviceInfo
@@ -85,6 +86,13 @@ import "scripts/Settings.js" as Settings
 
             }
 
+        }
+
+        FileDialog
+        {
+            id: fileDialogDummy // FileDialog load can take some time so we put on launh.qml so other pages load faster
+            visible: false
+            selectMultiple: false
         }
     }
 //}

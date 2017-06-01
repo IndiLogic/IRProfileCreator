@@ -14,6 +14,7 @@ Button {
     property alias rippleColor: ripple.color
     property bool useFontAwesome: false
     property int widthPadding: 0
+    property color activeBorderColor: "orange"
 
 
     background : Item{}
@@ -26,7 +27,7 @@ Button {
         radius: 4
         color: button.enabled ? button.buttonColor : "#eaeaea"
         visible: true
-        border.color: button.activeFocus ? "#ff02BEE2" : "#00000000"
+        border.color: button.activeFocus ? activeBorderColor : "#00000000"
         border.width: 3
     }
 

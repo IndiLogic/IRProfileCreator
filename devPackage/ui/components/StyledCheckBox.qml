@@ -12,6 +12,7 @@ CheckBox {
     property bool displayHelpIcon : false
     property bool displayHelpIconRightSide : true
     property alias helpText: popupHelp.text
+    property color activeBorderColor: "orange"
 
     indicator : Item{}
     contentItem: Item{}
@@ -52,7 +53,7 @@ CheckBox {
             radius: 4
             anchors.verticalCenter: parent.verticalCenter
             border.width: control.activeFocus ? 3  : 2
-            border.color: control.activeFocus ? "#ff02BEE2" : "lightgray"
+            border.color: control.activeFocus ? activeBorderColor : "lightgray"
 
             Rectangle {
                 id: rectangleCheck

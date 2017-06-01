@@ -6,9 +6,13 @@ Item {
     id: control
     width: row.width
     height: row.height
+    implicitHeight: row.height
 
     property alias text: text.text
     property color color: "orange"
+    property alias textWrapMode: text.wrapMode
+    property alias textMaxWidth: text.width
+    property alias textMaxHeight: text.height
 
     FontAwesome {
         id: fontAwesome
@@ -18,6 +22,7 @@ Item {
         spacing: 22
 
         TextWhiteBigTitle {
+            id: textIcon
             color: control.color
             font.family: "FontAwesome"
             text: fontAwesome.icons.fa_warning
@@ -29,6 +34,7 @@ Item {
             id:text
             color: control.color
             text: "TextWarning"
+
         }
     }
 }

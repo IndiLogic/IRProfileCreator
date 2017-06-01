@@ -134,31 +134,25 @@ Rectangle {
             //
             // New update is available but lest check required minimum IndiController Version
             //
-            console.log(packageInfoObject.info.minimumICVersion)
-            console.log(packageManager.icVersion)
             if(Utility.compareVersions(packageInfoObject.info.minimumICVersion,">",packageManager.icVersion))
             {
                 //
                 // Ask user to update to latest version of IndiController
                 //
-                mainText.text = qsTr("New update") +
-                        " " +
-                        packageInfoObject.info.version +
-                        " " +
-                        qsTr("is available but new update rquires IndiController version") +
-                        " " +
-                        packageInfoObject.info.minimumICVersion +
-                        " " +
-                        qsTr("and you have installed version") +
-                        " " +
-                        packageManager.icVersion +
-                        " " +
-                        qsTr(". Please update IndiController to latest version.")
+
+                //: %1 is new available update version,%2 is required IndiController version and %3 installed IndiController version. %1, %2 and %3 will replace at runtime
+                mainText.text = qsTr("New update %1 version is available. This new update requires IndiController %2. You have installed %3. Please update IndiController to the latest version.").
+                                arg(packageInfoObject.info.version).
+                                arg(packageInfoObject.info.minimumICVersion).
+                                arg(packageManager.icVersion)
+
 
             }
             else
             {
-                mainText.text = qsTr("New update") + " " + packageInfoObject.info.version + " " + qsTr("is available. Do you want to update?")
+                //: %1 is new available update version. %1 will replace at runtime
+                mainText.text = qsTr("New update %1 is available. Do you want to update?").
+                                arg(packageInfoObject.info.version)
                 buttonUpdate.visible = true
             }
         }

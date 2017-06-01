@@ -16,6 +16,12 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
+TRANSLATIONS = devPackage/ui/i18n/qml_es.ts \
+               devPackage/ui/i18n/qml_de.ts \
+               devPackage/ui/i18n/qml_ru.ts \
+               devPackage/ui/i18n/qml_ja.ts
+
+
 DISTFILES += \
     ProfileSettings.qml \
     devPackage/packageInfo.json\
@@ -55,9 +61,20 @@ DISTFILES += \
     devPackage/ui/scripts/WizardState.js \
     devPackage/ui/components/PopupGeneric.qml \
     devPackage/ui/components/PopupContent.qml \
-    devPackage/ui/popups/PopupSettings.qml
+    devPackage/ui/popups/PopupSettings.qml \
+    devPackage/ui/pages/PageCreateNewProfile.qml \
+    devPackage/ui/pages/PageModifyProfile.qml \
+    devPackage/ui/pages/PageDuplicateProfile.qml \
+    devPackage/ui/pages/PageExplainProfile.qml \
+    devPackage/ui/pages/PageCreateDefaultProfile.qml \
+    devPackage/ui/pages/PageCreateAppProfile.qml \
+    devPackage/ui/components/StyledTextField.qml \
+    devPackage/ui/components/RaisedButtonBlue.qml \
+    devPackage/ui/resources/images/DefaultProfileIcon.svg
 
-
+lupdate_only{
+SOURCES = $${DISTFILES}
+}
 
 
 

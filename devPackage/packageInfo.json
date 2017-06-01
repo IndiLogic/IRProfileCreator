@@ -1,7 +1,7 @@
 {
     "info": {
-        "version": "1.0.1",
-        "minimumICVersion": "2.0.1.97"
+        "version": "1.0.2",
+        "minimumICVersion": "2.0.1.99"
     },
     "files": [
         "ui/Launch.qml",
@@ -30,16 +30,29 @@
         "ui/components/RaisedButton.qml",
         "ui/components/RaisedButtonGreen.qml",
         "ui/components/RaisedButtonRed.qml",
+        "ui/components/RaisedButtonBlue.qml",
         "ui/components/PopupGeneric.qml",
         "ui/components/PopupContent.qml",
+        "ui/components/StyledTextField.qml",
         "ui/pages/PageBase.qml",
         "ui/pages/PageGenericError.qml",
         "ui/pages/PageWelcome.qml",
         "ui/pages/PageProfileCreationChoice.qml",
+        "ui/pages/PageCreateNewProfile.qml",
+        "ui/pages/PageModifyProfile.qml",
+        "ui/pages/PageDuplicateProfile.qml",
+        "ui/pages/PageExplainProfile.qml",
+        "ui/pages/PageCreateDefaultProfile.qml",
+        "ui/pages/PageCreateAppProfile.qml",
         "ui/popups/PopupSettings.qml",
         "ui/scripts/Utility.js",
         "ui/scripts/Settings.js",
         "ui/scripts/DeviceInfo.js",
-        "ui/scripts/WizardState.js"
+        "ui/scripts/WizardState.js",
+        "ui/resources/images/DefaultProfileIcon.svg",
+        "ui/i18n/qml_de.qm",
+        "ui/i18n/qml_es.qm",
+        "ui/i18n/qml_ja.qm",
+        "ui/i18n/qml_ru.qm"
     ]
 }
